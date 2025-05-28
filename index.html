@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #e1f5ff, #ffffff);
+        color: #222;
+    }
+
+    header {
+        background-color: #0074cc;
+        padding: 15px 20px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px #003b70;
+        border-bottom: 4px solid #005a9c;
+    }
+
+    main {
+        background-color: #fff;
+        border: 3px solid #0074cc;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #005a9c;
+    }
+
+    #questao-enunciado {
+        font-size: 18px;
+        background-color: #f0f8ff;
+        border: 2px solid #0074cc;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border: 2px solid #0074cc;
+        border-radius: 6px;
+        width: calc(100% - 24px);
+        box-sizing: border-box;
+        font-size: 16px;
+        background-color: #f8faff;
+        margin-bottom: 12px;
+    }
+
+    button {
+        background-color: #00cc66;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        box-shadow: 0 4px 0 #00994d;
+    }
+
+    button:hover {
+        background-color: #00b359;
+    }
+
+    button:disabled {
+        background-color: #cccccc;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+
+    #contador {
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+        margin-top: 40px;
+    }
+
+    /* Popup de resultado */
+    #resultado-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fffbe0;
+        border: 3px solid #0074cc;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        display: none;
+        z-index: 1000;
+        font-size: 18px;
+        text-align: center;
+    }
+</style>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mathdle - Desafio Diário</title>
+  <script src="script.js" defer></script>
+</head>
+<body style="font-family: sans-serif; padding: 2rem; max-width: 600px; margin: auto;">
+  <h1>Mathdle</h1>
+  <h2>Desafio Matemático do Dia</h2>
+  <p id="questao-enunciado" style="font-size: 1.2rem; margin-bottom: 1rem;"></p>
+  <p id="contador">Próxima questão em: --:--:--</p>
+  <input id="campo-resposta" type="text" placeholder="Qual o Valor de X?" style="padding: 0.5rem; width: 100%; max-width: 300px;" />
+  <button id="enviar-resposta" style="margin-top: 0.5rem; padding: 0.5rem 1rem;">Enviar</button>
+</body>
+</html>
