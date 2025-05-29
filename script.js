@@ -31,4 +31,3 @@ mostrarQuestaoDoDia(); atualizarTimer(); setInterval(atualizarTimer, 1000);
 const result = document.getElementById("result"); const btn = document.getElementById("submitBtn");
 
 btn.addEventListener("click", () => { const selecionado = document.querySelector("input[name='alt']:checked"); if (!selecionado) { result.textContent = "Selecione uma alternativa."; return; } const valor = parseInt(selecionado.value); if (valor === window.respostaCorreta) { result.textContent = "Resposta correta! ✅"; } else { result.textContent = "Resposta incorreta. Tente novamente."; } }); });
-
