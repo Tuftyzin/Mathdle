@@ -35,12 +35,13 @@
     #alternatives {
       text-align: left;
       margin: 0 auto 1rem;
-      max-width: 400px;
+      max-width: 420px;
     }
     #alternatives label {
       display: block;
       margin: 0.4rem 0;
       font-size: 1.1rem;
+      cursor: pointer;
     }
     #submitBtn {
       font-size: 1.1rem;
@@ -65,29 +66,3 @@
       top: 15px;
       right: 15px;
       font-size: 0.9rem;
-      padding: 0.4rem 0.7rem;
-      background-color: #444;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      z-index: 100;
-    }
-    body.light-mode #toggleThemeBtn {
-      background-color: #0077cc;
-    }
-  </style>
-</head>
-<body class="light-mode">
-  <button id="toggleThemeBtn">Modo Escuro</button>
-
-  <h1>Mathdle</h1>
-  <div id="timer">Carregando timer...</div>
-  <div id="question">Carregando questão...</div>
-  <div id="alternatives">Carregando alternativas...</div>
-  <button id="submitBtn">Enviar</button>
-  <div id="result"></div>
-
-  <script src="script.js"></script>
-</body>
-</html>
