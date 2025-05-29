@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mathdle</title>
+  <style>
+    body.light-mode {
+      background: #f4f7fa;
+      color: #222;
+    }
+    body.dark-mode {
+      background: #121212;
+      color: #eee;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    #timer {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    #question {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    #alternatives {
+      text-align: left;
+      margin: 0 auto 1rem;
+      max-width: 420px;
+    }
+    #alternatives label {
+      display: block;
+      margin: 0.4rem 0;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    #submitBtn {
+      font-size: 1.1rem;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #submitBtn:hover {
+      background-color: #005fa3;
+    }
+    #result {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    #toggleThemeBtn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.7rem;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    body.light-mode #toggleThemeBtn {
+      background-color: #0077cc;
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <button id="toggleThemeBtn">Modo Escuro</button>
+
+  <h1>Mathdle</h1>
+  <div id="timer">Carregando timer...</div>
+  <div id="question">Carregando questão...</div>
+  <div id="alternatives">Carregando alternativas...</div>
+  <button id="submitBtn">Enviar</button>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
